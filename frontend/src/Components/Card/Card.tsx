@@ -1,35 +1,42 @@
-import React, { JSX } from "react";
+import React, { JSX, SyntheticEvent } from "react";
 import "./Card.css";
+import { CompanySearch } from "../../company";
+import AddPortfolio from "../Portfolio/AddPortfolio/AddPortfolio";
+import { Link } from "react-router-dom";
 
 interface Props {
-  companyName: string;
-  ticker: string;
-  price: number;
+  id: string;
+  searchResult: CompanySearch;
+  onPortfolioCreate: (e: SyntheticEvent) => void;
 }
 
 const Card: React.FC<Props> = ({
-  companyName,
-  ticker,
-  price,
+  id,
+  searchResult,
+  onPortfolioCreate,
 }: Props): JSX.Element => {
   return (
-    <div className="card">
-      <img
-        src="https://images.unsplash.com/photo-1591779051696-1c3fa1469a79?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="image"
-        width={300}
-      />
-      <div className="details">
-        <h2>
-          {companyName} ({ticker})
-        </h2>
+    <div
+      className="flex flex-col items-center justify-between w-full p-6 bg-slate-100 rounded-lg md:flex-row"
+      key={id}
+      id={id}
+    >
+      <Link
+        to={`/company/${searchResult.symbol}`}
+        className="font-bold text-center text-black md:text-left"
+      >
+        {searchResult.name} ({searchResult.symbol})
+      </Link>
+      <p className="text-black"> {searchResult.currency}</p>
+      <p className="font-bold text-black">
+        {" "}
+        {searchResult.exchange} - {searchResult.exchangeFullName}
+      </p>
 
-        <p>${price}</p>
-      </div>
-      <div className="info">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam voluptas
-        nihil officiis fugiat magni suscipit.
-      </div>
+      <AddPortfolio
+        onPortfolioCreate={onPortfolioCreate}
+        symbol={searchResult.symbol}
+      />
     </div>
   );
 };
