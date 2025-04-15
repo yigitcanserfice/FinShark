@@ -1,4 +1,3 @@
-import React from "react";
 import { testIncomeStatementData } from "./testData";
 
 const data = testIncomeStatementData;
@@ -47,7 +46,7 @@ const Table = (props: Props) => {
   return (
     <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8">
       <table>
-        <thead className=" min-w-full divide-y divide-gray-200 m-5">
+        <thead className=" min-w-full divide-y divide-gray-200 m-5 ">
           {renderedHeaders}
         </thead>
         <tbody>{renderedRows}</tbody>
