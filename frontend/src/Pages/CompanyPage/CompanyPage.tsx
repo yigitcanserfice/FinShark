@@ -6,6 +6,7 @@ import Sidebar from "../../Components/Sidebar/Sidebar";
 import CompanyDasboard from "../../Components/CompanyDashboard/CompanyDasboard";
 import Tile from "../../Components/Tile/Tile";
 import Spinner from "../../Components/Spinner/Spinner";
+import CompFinder from "../../Components/CompFinder/CompFinder";
 
 interface Props {}
 
@@ -17,7 +18,6 @@ const CompanyPage = (props: Props) => {
     const getProfileInit = async () => {
       const result = await getCompanyProfile(ticker!);
       setCompany(result?.data[0]);
-      console.log(result);
     };
     getProfileInit();
   }, []);
@@ -32,9 +32,14 @@ const CompanyPage = (props: Props) => {
             <Tile title="Company Name" subTitle={company.companyName} />
             <Tile title="Price" subTitle={"$" + company.price.toString()} />
             <Tile title="Sector" subTitle={company.sector} />
+            <Tile
+              title="Market Cap"
+              subTitle={company.marketCap.toString()}
+            ></Tile>
             <p className=" bg-white shadow rounded text-base text-gray-900 p-3 mt-1 m-4">
               {company.description}
             </p>
+            <CompFinder ticker={company.symbol} />
           </CompanyDasboard>
         </div>
       ) : (

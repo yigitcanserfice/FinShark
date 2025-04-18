@@ -11,7 +11,7 @@ export interface CompanySearch {
     price: number;
     beta: number;
     volAvg: number;
-    mktCap: number;
+    marketCap: number;
     lastDiv: number;
     range: string;
     changes: number;
@@ -307,4 +307,11 @@ export interface CompanySearch {
     capexPerShareTTM: number;
     dividendPerShareTTM: number;
     debtToMarketCapTTM: number;
+  }
+
+  export interface CompanyCompData {
+    symbol: string;
+    companyName: string;
+    price: number;
+    mktCap: number;
   }
