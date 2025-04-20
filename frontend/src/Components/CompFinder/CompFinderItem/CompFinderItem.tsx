@@ -11,9 +11,9 @@ const CompFinderItem = ({ company }: Props) => {
     <Link
       reloadDocument
       to={`/company/${company.symbol}/company-profile`}
-      className="inline-flex flex-col items-start p-4 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-md w-48"
+      className="inline-flex flex-col items-center p-4 bg-gray-100 hover:bg-gray-200 rounded-lg shadow-md w-24 "
     >
-      <span className="font-bold text-sm">{company.symbol}</span>
+      <span className="font-bold text-sm ">{company.symbol}</span>
     </Link>
   );
 };
