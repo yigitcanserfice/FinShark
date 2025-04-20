@@ -315,3 +315,13 @@ export interface CompanySearch {
     price: number;
     mktCap: number;
   }
+
+  export interface CompanyTenK {
+    symbol: string;
+    fillingDate: string;
+    acceptedDate: string;
+    cik: string;
+    type: string;
+    link: string;
+    finalLink: string;
+  }
