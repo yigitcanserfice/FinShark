@@ -1,5 +1,10 @@
 export type UserProfileToken = {
-    username:string;
+    userName:string;
     email:string;
-    toke:string;
+    token:string;
+}
+
+export type UserProfile = {
+    userName:string;
+    email:string;
 }
