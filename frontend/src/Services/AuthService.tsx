@@ -15,6 +15,7 @@ export const loginAPI = async (username: string, password: string) => {
     handleError(error);
   }
 };
+
 export const registerAPI = async (
   email: string,
   username: string,

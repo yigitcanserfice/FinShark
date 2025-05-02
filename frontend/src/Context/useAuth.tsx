@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { UserProfile } from "../Models/User";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { loginAPI, registerAPI } from "../Services/AuthService";
 import { toast } from "react-toastify";
 import React from "react";
@@ -56,7 +56,7 @@ export const UserProvider = ({ children }: Props) => {
           navigate("/search");
         }
       })
-      .catch((e) => toast.warning("Server error occured!"));
+      .catch((e) => toast.warning("Server error occured"));
   };
 
   const loginUser = async (username: string, password: string) => {
@@ -75,7 +75,7 @@ export const UserProvider = ({ children }: Props) => {
           navigate("/search");
         }
       })
-      .catch((e) => toast.warning("Server error occured!"));
+      .catch((e) => toast.warning("Server error occured"));
   };
 
   const isLoggedIn = () => {
