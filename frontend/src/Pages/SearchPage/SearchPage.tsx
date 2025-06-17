@@ -47,7 +47,7 @@ const SearchPage = (props: Props) => {
     e.preventDefault();
     portfolioAddAPI(e.target[0].value)
       .then((res) => {
-        if (res?.status === 204) {
+        if (res?.status === 201) {
           toast.success("Stock added to portfolio!");
           getPortfolio();
         }
