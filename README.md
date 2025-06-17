@@ -112,29 +112,3 @@ To get the project up and running on your local machine, follow these steps.
     ```
     The application will open in your browser at `http://localhost:3000`.
 
-## 📂 Project Structure
-
-FinShark/
-├── api/
-│ ├── Controllers/
-│ ├── Data/
-│ ├── Dtos/
-│ ├── Interfaces/
-│ ├── Mappers/
-│ ├── Migrations/
-│ ├── Models/
-│ ├── Repository/
-│ ├── Service/
-│ ├── Program.cs
-│ └── api.csproj
-└── frontend/
-├── public/
-└── src/
-├── Components/
-├── Context/
-├── Helpers/
-├── Models/
-├── Pages/
-├── Routes/
-├── Services/
-└── App.tsx
