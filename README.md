@@ -116,26 +116,25 @@ To get the project up and running on your local machine, follow these steps.
 
 FinShark/
 ├── api/
-│ ├── Controllers/ # API endpoints
-│ ├── Data/ # EF Core DbContext
-│ ├── Dtos/ # Data Transfer Objects
-│ ├── Interfaces/ # Repository and service interfaces
-│ ├── Mappers/ # Object mapping logic
-│ ├── Migrations/ # EF Core database migrations
-│ ├── Models/ # Database entity models
-│ ├── Repository/ # Data access logic
-│ ├── Service/ # Business logic (Token, FMP)
-│ ├── Program.cs # Main application entry point
-│ └── api.csproj # Project file
-│
+│ ├── Controllers/
+│ ├── Data/
+│ ├── Dtos/
+│ ├── Interfaces/
+│ ├── Mappers/
+│ ├── Migrations/
+│ ├── Models/
+│ ├── Repository/
+│ ├── Service/
+│ ├── Program.cs
+│ └── api.csproj
 └── frontend/
-├── public/ # Static assets
+├── public/
 └── src/
-├── Components/ # Reusable React components
-├── Context/ # React Context for authentication
-├── Helpers/ # Utility functions
-├── Models/ # TypeScript models for API data
-├── Pages/ # Page-level components
-├── Routes/ # React Router configuration
-├── Services/ # API service calls
-└── App.tsx # Main application component
+├── Components/
+├── Context/
+├── Helpers/
+├── Models/
+├── Pages/
+├── Routes/
+├── Services/
+└── App.tsx
